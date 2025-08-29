@@ -1,0 +1,15 @@
+    body {
+      background-color: #070707;
+    }
+    /* Scrollbar estilizado */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070707;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #5F81F0;
+      border-radius: 10px;
+    }
