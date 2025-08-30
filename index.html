@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MaxFilms - Clone Netflix</title>
+  <title>Maxx Films</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<script src="script/modal.js" type="module"></script>
-<script src="script/api.js" type="module"></script>
+  <script src="script/modal.js" type="module"></script>
+  <script src="script/api.js" type="module"></script>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/modal.css">
 </head>
 
 
-  <!-- Header -->
-  <header class="flex items-center justify-between p-4 border-b border-gray-800 sticky top-0 bg-[#070707] z-50">
-    <h1 class="text-3xl font-bold text-[#5F81F0] cursor-pointer select-none">MaxFilms</h1>
-    <nav>
-      <ul class="flex space-x-6 text-lg">
-        <li><button class="hover:text-[#5F81F0] transition">Início</button></li>
-        <li><button class="hover:text-[#5F81F0] transition">Séries</button></li>
-        <li><button class="hover:text-[#5F81F0] transition">Filmes</button></li>
-        <li><button class="hover:text-[#5F81F0] transition">Minha Lista</button></li>
-      </ul>
-    </nav>
-    <div class="flex items-center">
-      <div id="loginArea" class="flex items-center">
-        <!-- O botão de login ou a mensagem de boas-vindas será inserida aqui via JavaScript -->
-        <button id="loginBtn" class="bg-[#5F81F0] px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">Login</button>
-      </div>
-      <input id="searchInput" type="text" placeholder="Buscar filmes..."
-        class="rounded px-3 py-1 text-black focus:outline-none ml-4" />
-      <button id="searchBtn" class="bg-[#5F81F0] px-3 py-1 rounded ml-2 hover:bg-blue-700 transition">Buscar</button>
-    </div>
-  </header>
+<!-- Header -->
+<header class="flex items-center justify-between p-5 border-b border-gray-800 sticky top-0 bg-[#070707] z-10">
+  <h1 class="text-3xl font-bold text-[#5F81F0] cursor-cursor select-none">Maxx Films</h1>
 
-  <!-- Destaque -->
-  <section id="featured" class="relative h-[60vh] flex items-end p-8 bg-gradient-to-t from-[#070707] to-transparent">
-    <div class="max-w-4xl">
-      <h2 id="featuredTitle" class="text-4xl font-extrabold mb-4"></h2>
-      <p id="featuredOverview" class="text-lg max-w-2xl mb-6"></p>
-      <button id="watchBtn" class="bg-[#5F81F0] px-6 py-3 rounded font-semibold hover:bg-blue-700 transition">Assistir</button>
-    </div>
-    <div id="featuredBackdrop" class="absolute top-0 left-0 w-full h-full bg-cover bg-center -z-10 opacity-40 rounded-lg"></div>
-  </section>
+  <div class="flex items-left">
 
-  <!-- Lista de filmes -->
-  <main class="p-8 max-w-7xl mx-auto">
-    <h3 class="text-2xl font-bold mb-6">Filmes Populares</h3>
-    <div id="moviesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"></div>
-  </main>
 
-  <!-- Modal de Login -->
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Entrar</h2>
-      <form id="loginForm">
-        <label for="username" class="sr-only">Usuário:</label>
-        <input type="text" id="username" placeholder="Usuário" required class="w-full">
-        <label for="password" class="sr-only">Senha:</label>
-        <input type="password" id="password" placeholder="Senha" required class="w-full">
-        <button type="submit" class="w-full">Entrar</button>
-      </form>
-    </div>
+    <input id="searchInput" type="text" placeholder="Buscar filmes..."
+      class="rounded px-3 py-1 text-black focus:outline-none ml-4" />
+    <button id="searchBtn" class="bg-[#5F81F0] px-5 py-2 rounded ml-2 hover:bg-blue-700 transition">Buscar</button>
+
+  </div>
+  <div id="loginArea" class="flex items-center">
+    <button id="loginBtn"
+      class="bg-[#5F81F0] px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">Login</button>
   </div>
 
-  <!-- <script src="script/script.js" defer></script> -->
+  </div>
+</header>
+
+<!-- Destaque -->
+<section id="featured" class="relative h-[60vh] flex items-end p-8 bg-gradient-to-t from-[#070707] to-transparent">
+  <div class="max-w-4xl">
+    <h2 id="featuredTitle" class="text-4xl font-extrabold mb-4"></h2>
+    <p id="featuredOverview" class="text-lg max-w-2xl mb-6"></p>
+    <button id="watchBtn"
+      class="bg-[#5F81F0] px-6 py-3 rounded font-semibold hover:bg-blue-700 transition">Assistir</button>
+  </div>
+  <div id="featuredBackdrop" class="absolute top-0 left-0 w-full h-full bg-cover bg-center -z-10 opacity-40 rounded-lg">
+  </div>
+</section>
+
+<!-- Lista de filmes -->
+<main class="p-8 max-w-7xl mx-auto">
+  <h3 class="text-2xl font-bold mb-6">Filmes Populares</h3>
+  <div id="moviesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"></div>
+</main>
+
+<!-- modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Entrar</h2>
+    <form id="loginForm">
+      <label for="username" class="sr-only">Usuário:</label>
+      <input type="text" id="username" placeholder="Usuário" required class="w-full">
+      <label for="password" class="sr-only">Senha:</label>
+      <input type="password" id="password" placeholder="Senha" required class="w-full">
+      <button type="submit" class="w-full">Entrar</button>
+    </form>
+  </div>
+</div>
+
 </body>
+
 </html>
