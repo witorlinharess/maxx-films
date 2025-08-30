@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MaxFilms - Clone Netflix</title>
   <script src="https://cdn.tailwindcss.com"></script>
+<script src="script/modal.js" type="module"></script>
+<script src="script/api.js" type="module"></script>
   <link rel="stylesheet" href="style/style.css">
-  <script src="script/script.js" defer></script>
- <script src="https://cdn.tailwindcss.com"></script>
-
-
-
+  <link rel="stylesheet" href="style/modal.css">
 </head>
-<body class="bg-[#070707] text-white font-sans">
 
 
   <!-- Header -->
@@ -26,9 +23,13 @@
         <li><button class="hover:text-[#5F81F0] transition">Minha Lista</button></li>
       </ul>
     </nav>
-    <div>
-      <input id="searchInput" type="text" placeholder="Buscar filmes..." 
-        class="rounded px-3 py-1 text-black focus:outline-none" />
+    <div class="flex items-center">
+      <div id="loginArea" class="flex items-center">
+        <!-- O botão de login ou a mensagem de boas-vindas será inserida aqui via JavaScript -->
+        <button id="loginBtn" class="bg-[#5F81F0] px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">Login</button>
+      </div>
+      <input id="searchInput" type="text" placeholder="Buscar filmes..."
+        class="rounded px-3 py-1 text-black focus:outline-none ml-4" />
       <button id="searchBtn" class="bg-[#5F81F0] px-3 py-1 rounded ml-2 hover:bg-blue-700 transition">Buscar</button>
     </div>
   </header>
@@ -49,5 +50,21 @@
     <div id="moviesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"></div>
   </main>
 
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Entrar</h2>
+      <form id="loginForm">
+        <label for="username" class="sr-only">Usuário:</label>
+        <input type="text" id="username" placeholder="Usuário" required class="w-full">
+        <label for="password" class="sr-only">Senha:</label>
+        <input type="password" id="password" placeholder="Senha" required class="w-full">
+        <button type="submit" class="w-full">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <script src="script/script.js" defer></script> -->
 </body>
 </html>

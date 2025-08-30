@@ -1,4 +1,8 @@
-    /* Scrollbar estilizado */
+ body{
+  background-color: #070707;
+  color: #ffffff;
+ }
+ 
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;

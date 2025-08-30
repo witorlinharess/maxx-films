@@ -1,4 +1,6 @@
-    const API_KEY = '3768af77daf09e55427b9e33fd7bc822'; // Substitua aqui
+import { API_KEY } from './config.js';
+
+
     const BASE_URL = 'https://api.themoviedb.org/3';
     const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
